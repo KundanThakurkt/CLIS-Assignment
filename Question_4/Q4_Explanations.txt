@@ -67,6 +67,7 @@ Explanation: The sudo apt install command downloads and installs software packag
 Command: ncdu ~
 Output:  [scans the home directory and shows an interactive disk-usage breakdown. Refer Question4_Part6_ncdu.png, and Question4_Part7_ncdu.png]
 Explanation: The ncdu ~ command opens a ncdu tool which provides an interactive, visual overview of disk usage within the home directory, making it easier to identify space-consuming files and folders. It helps you find and clean up large files and directories easily.
+Large unwanted files can be identified and deleted to optimize storage using the tool.
 
 Command: ncdu /
          ncdu -x /
@@ -75,3 +76,6 @@ Output:  [Scans entire filesystem, one filesystem and quite mode options, Refer 
 Explanation: The ncdu / command scan entire filesystem (usually with sudo)
              The ncdu -x / command stay on one filesystem (ignore other mounts)
              The ncdu -q ~ command is for scanning in quiet mode (faster, less output)
+
+
+
