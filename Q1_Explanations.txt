@@ -1,0 +1,71 @@
+Question 1
+Please refer screenshots Question_part1.png and Question_part2.png, log.txt and user_info.txt files for command execution and output with below explanations:
+
+1. User Identity Verification
+Command: whoami
+Output: root
+Explanation: The whoami command displays the currently logged-in username.
+
+Command: groups
+Output: root
+Explanation: The groups command shows all groups that the current user account belongs to.
+
+2. Workspace Validation
+Command: pwd
+Output: /root
+Explanation: The pwd command displays the present working directory.
+
+Command: ls -l
+Output: [Refer Screenshot Question1_part1.png]
+Explanation: The ls -l command lists files and directories in long format, showing permissions, ownership, size, and timestamps.
+
+3. Environment Confirmation File
+Command: echo "Linux user environment verified" > user_info.txt
+Output: [Command execution is done internally, no output]
+Explanation: This command creates a file named user_info.txt and writes the specified confirmation message given in “ ” into it using output redirection.
+
+Command: cat user_info.txt
+Output: Linux user environment verified [Refer user_info.txt]
+Explanation: This cat command displays the contents of the given file.
+
+4. File Integrity Check
+Command: wc -c user_info.txt
+Output: 32 user_info.txt
+Explanation: The wc -c command counts and displays the total number of characters present in the file
+
+5. Learning The Tools
+Command: man mkdir
+Output: [Displays a manual page for mkdir, refer mkdir_manual.png]
+Explanation: man mkdir opens the manual (help) page for the mkdir command.
+Command: mkdir -p parent/child
+Output: [Parent directory is created inside the current along with child, with no output, but can be verified using <ls> command refer screenshot Question1_part1.png ]
+Explanation: The -p option allows mkdir to create parent directories as needed and does not throw an error if the directory already exists.
+
+6. Home Directory Inspection
+Command: ls ~
+Output: [Lists home directory content, refer Question1_part1.png]
+Explanation: The ls ~ command lists all files and directories in the user’s home directory sorted alphabetically.
+
+7. Log Investigation
+Command: grep "admin" log.txt
+Output:  admin Tu Toh Badla Nahin Hai
+               admin Zara Sa Rootha Hua Hai
+Explanation: The grep command searches for the word “admin” in log.txt and displays only the lines that contain the matching text.
+
+8. System Information Check
+Command: uname -r
+Output:  6.8.11-amd64
+Explanation: The uname -r command displays the version of the Linux kernel currently running on the system.
+
+9. Network Connectivity Test
+Command: ping -c 4 www.google.com
+Output:  [Successful ICMP replies includes time for each reply(in ms), sequences, and size, refer Question1_part2.png]
+Explanation: This command sends ICMP echo requests to www.google.com to verify network connectivity and host reachability. -c 4, counts 4 packets and then stops automatically.
+
+10. System Health Awareness
+Command: uptime
+Output:  10:31:58 up 43 min, 2 users, load average: 0.47, 0.45, 0.36
+Explanation: The uptime command displays how long the system has been running, the number of logged-in users, and the load average over the last 1, 5, and 15 minutes.
+	     Output means 43 mins since session began, with total 2 users, and with 0.47, 0.45 and 0.36 as load average.	
+
+
