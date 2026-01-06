@@ -1,1 +1,77 @@
+Question 4
+Please refer screenshots Question4_part1.png and Question4_part2_CPU_usage.png, Question4_Part3.png, Question4_Part4.png, Question4_Part5.png, Question4_Part6_ncdu.png, Question4_Part7_ncdu.png, Question4_Part8_ncdu.png, Question4_Part9_ncdu.png, Question4_Part10_ncdu.png, and Question4_ProcessPriority_before.png, Question4_ProcessPriority_after.png, system_report.txt files for command execution and output with below explanations:
 
+1. System Uptime Verification
+Command: uptime
+Output: 11:40:44 up 1:52 2 users, load average: 0.17, 0.28, 0.27
+Explanation: The uptime command shows current time, system running for 1h 52m, 2 users logged in, and low CPU load (last 1, 5, 15 minutes).
+
+2. User Process Listing
+Command: ps -u $USER
+Output: [showing processes owned by the user, refer Question4_part1.png]
+Explanation: The ps -u $USER command displays PID, TTY, CPU time, and command for each process owned by the current user.
+
+3. CPU Usage Analysis
+Command: top -u $USER
+Output: [showing CPU usage column, refer Question4_part2.png]
+Explanation: The top -u $USER command shows real-time CPU, memory usage, and process list filtered to the current user and and helps identify the process consuming the highest CPU.
+From Question4_part2.png, gnome-shell is consuming the highest CPU usage (about 4.3% CPU).
+
+4. Background Process Execution
+Command: sleep 20 &  
+Output: [1] 3133 
+Explanation: Runs sleep for 20 seconds in the background, [1] is the job number and 3133 is the process ID (PID).
+
+Command: jobs  
+Output: [1]+ Running sleep 20 &
+Explanation: The jobs command confirms that the background process is running.
+
+5. Process Priority Management
+Command: ps -o pid, ni, cmd -u SUSER
+Output: [Displays the list of processes. Refer Question4_part3.png]
+Explanation: The ps command with parameters pid, ni, cmd displays each process’s PID, nice value (priority), and command for the specified user.
+
+Command: renice 5 -p 2116
+Output: 2116 (process ID) old priority 0, new priority 5 [Refer Question4_part4.png]
+Explanation: Changes the priority (nice value) of process PID 2116 to 5, making it run with lower priority than default 0.
+
+Command: ps -o pid, ni, cmd -u SUSER
+Output: [Refer Question4_ProcessPriority_before.png and Question4_ProcessPriority_after.png]
+Explanation: Changed priority(niceness) can be verified from the mentioned screenshots.
+
+6. Memory Usage Monitoring
+Command: free -h
+Output: [Shows list of memory usage, refer Question4_part5.png ]
+Explanation: The free -h command displays total, used, and available memory in a human-readable format.
+
+7. Disk Space Inspection
+Command: df -h ~
+Output:  [</dev/sdal> Filesystem usage details, refer Question4_part5.png]
+Explanation: The df -h ~ command shows disk space usage of the filesystem </dev/sdal> where the home directory resides in a human-readable format.
+
+8. Shell Identification
+Command: echo $SHELL
+Output:  /bin/bash
+Explanation: The echo $SHELL command displays the name and path of the shell currently being used by the user.
+
+9. Output Redirection
+Command: uname -a > system_report.txt
+Output:  [Runs uname -a and redirects its output into the file system_report.txt (overwriting or creating the file)]
+Explanation: The uname -a command displays full system information: kernel name, hostname, kernel version, build date, and system architecture and > is output redirection, it sends a command’s output into a file instead of the screen, overwriting the file if it exists.
+
+10. Disk Usage Visualization
+command: sudo apt install ncdu [installing ncdu]
+Output:  [ncdu is installed, Refer Question4_Part6_ncdu.png]
+Explanation: The sudo apt install command downloads and installs software packages (with dependencies) using administrator privileges.
+
+Command: ncdu ~
+Output:  [scans the home directory and shows an interactive disk-usage breakdown. Refer Question4_Part6_ncdu.png, and Question4_Part7_ncdu.png]
+Explanation: The ncdu ~ command opens a ncdu tool which provides an interactive, visual overview of disk usage within the home directory, making it easier to identify space-consuming files and folders. It helps you find and clean up large files and directories easily.
+
+Command: ncdu /
+         ncdu -x /
+         ncdu -q ~
+Output:  [Scans entire filesystem, one filesystem and quite mode options, Refer Question4_Part8_ncdu.png, Question4_Part9_ncdu.png, Question4_Part10_ncdu.png]
+Explanation: The ncdu / command scan entire filesystem (usually with sudo)
+             The ncdu -x / command stay on one filesystem (ignore other mounts)
+             The ncdu -q ~ command is for scanning in quiet mode (faster, less output)
