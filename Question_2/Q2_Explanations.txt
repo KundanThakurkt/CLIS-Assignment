@@ -1,1 +1,65 @@
+Question 2
+Please refer screenshots Question_2.png and plantxt.png, plan.txt and plan_copy.txt files for command execution and output with below explanations:
+
+1. Project Workspace Setup
+Command: mkdir ~/documents
+Output: [Creates documents directory]
+Explanation: This command creates a directory named documents inside the user’s home directory to store project-related files.
+
+2. File Creation
+Command: cd documents/
+Output: [Changes the current working directory to documents]
+Explanation: The cd command navigates into the documents directory.
+
+Command: touch plan.txt
+Output: [Creates plan.txt file]
+Explanation: The touch command creates an empty file named plan.txt.
+
+3. Content Addition
+Command: nano plan.txt
+Output: [opens a terminal-based text editor, Nano, and sample text has been added, refer screenshot plantxt.png]
+Explanation: The nano command opens the file (or creates it if it doesn’t exist) so you can edit text directly in the terminal.
+
+Command: cat plan.txt
+Output: "This needs to be completed by 5th Jan EOD"
+Explanation: This cat command displays the contents of the plan.txt file.
+
+4. File Metadata Verification
+Command: ls -l plan.txt
+Output: -rw-r--r-- 1 root root 44 Jan 5 10:47 plan.txt
+Explanation: The ls -l command displays file permissions, ownership, size, and timestamps for plan.txt.
+
+5. File Duplication
+Command: cp plan.txt plan_copy.txt
+Output: [Duplicate file gets created internally with no output]
+Explanation: This cp command creates a duplicate of plan.txt named plan_copy.txt in the same directory.
+
+Command: ls
+Output: plan.txt plan_copy.txt
+Explanation: The ls command displays the original & newly created duplicate file.
+
+6. Directory Renaming
+Command: mv documents project_documents
+Output: [Using ls command verify renaming, refer Question_2.png]
+Explanation: The mv command renames the directory from documents to project_documents to better reflect the project scope.
+
+7. Archival Structure
+Command: mkdir archive
+Output:  [archive subirectory is created, verify with ls command, refer Question_2.png]
+Explanation: The mkdir command creates a subdirectory named archive inside the project_documents directory.
+
+8. File Organization
+Command: mv plan_copy.txt archive/
+Output:  [plan_copy.txt moves into the archive subdirectory]
+Explanation: The mv command moves plan_copy.txt into the archive subdirectory for better file organization.
+
+9. Recursive Listing
+Command: ls -R
+Output:  [Shows full directory tree. Refer Question_2.png]
+Explanation: The ls -R command recursively lists all files and subdirectories inside project_documents, displaying the complete structure.
+
+10. Path Verification
+Command: realpath ~/proiect documents/archive/plan copy.txt
+Output:  /root/project_documents/archive/plan_copy.txt
+Explanation: The realpath command displays the absolute path of plan_copy.txt after it has been moved to the archive directory.
 
