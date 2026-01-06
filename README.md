@@ -7,7 +7,7 @@ Each question has been organized into a separate folder as instructed.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 .
 ├── Question_1/
@@ -26,7 +26,7 @@ Each **Question folder** contains:
 
 ---
 
-## 🧪 Question Overview
+## Question Overview
 
 ### Question 1 – User & Environment Verification
 - User identity and group verification
