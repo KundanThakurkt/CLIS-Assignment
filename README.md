@@ -11,10 +11,28 @@ Each question has been organized into a separate folder as instructed.
 
 .
 ├── Question_1/
+│   ├── Files/
+│   ├── Screenshots/
+│   └── Q1_Explanations.txt
+│
 ├── Question_2/
+│   ├── Files/
+│   ├── Screenshots/
+│   └── Q2_Explanations.txt
+│
 ├── Question_3/
+│   ├── Files/
+│   ├── Screenshots/
+│   └── Q3_Explanations.txt
+│
 ├── Question_4/
+│   ├── Files/
+│   ├── Screenshots/
+│   └── Q4_Explanations.txt
+│
 └── README.md
+
+
 
 
 Each **Question folder** contains:
@@ -22,7 +40,7 @@ Each **Question folder** contains:
 - Corresponding command outputs
 - Screenshots of command execution/output
 - Files created as part of the task
-- An `Q[n]_Explanations.txt` file with **1–2 sentence explanations after every command**
+- An `Q*_Explanations.txt` file with **1–2 sentence explanations after every command**
 
 ---
 
@@ -57,4 +75,4 @@ Each **Question folder** contains:
 ## Notes
 - All outputs are system-dependent and may vary.
 - Screenshots are provided as proof of execution.
-- Explanations are written in plain text to clearly demonstrate understanding.
+- Explanations are written in plain text to clearly demonstrate understanding with command, output & explanation in brief.
