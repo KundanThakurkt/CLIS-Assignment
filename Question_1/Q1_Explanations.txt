@@ -1,5 +1,5 @@
 Question 1
-Please refer screenshots Question_part1.png and Question_part2.png, log.txt and user_info.txt files for command execution and output with below explanations:
+Please refer screenshots Question1_part1.png and Question1_part2.png, log.txt and user_info.txt files for command execution and output with below explanations:
 
 1. User Identity Verification
 Command: whoami
